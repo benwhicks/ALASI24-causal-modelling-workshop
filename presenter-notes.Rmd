@@ -54,6 +54,8 @@ Any data-driven approach falls short here. Knowledge must come from outside the 
 
 You build it, then what?
 
+### The map is not the territory, but the right map is useful
+
 
 ### Qualitative reasoning about interventions
 
@@ -91,3 +93,8 @@ How wide does the model go? What get's included in the model?
 
 How detailed is the model? Do some nodes need to be merged? Should some be split?
 
+## 5. Do - draw with pens
+
+## 6. Now what - implications with DAGitty
+
+## 7. Reflect

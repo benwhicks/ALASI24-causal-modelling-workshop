@@ -12,6 +12,8 @@ Ben Hicks
     - [Analysing - connecting to conditional
       independence](#analysing---connecting-to-conditional-independence)
   - [3 Why (part 2 - affordances)](#3-why-part-2---affordances)
+    - [The map is not the territory, but the right map is
+      useful](#the-map-is-not-the-territory-but-the-right-map-is-useful)
     - [Qualitative reasoning about
       interventions](#qualitative-reasoning-about-interventions)
     - [Simulation](#simulation)
@@ -23,6 +25,10 @@ Ben Hicks
     - [Think in paths](#think-in-paths)
     - [Bounding](#bounding)
     - [Depth](#depth)
+  - [5. Do - draw with pens](#5-do---draw-with-pens)
+  - [6. Now what - implications with
+    DAGitty](#6-now-what---implications-with-dagitty)
+  - [7. Reflect](#7-reflect)
 
 # Presenter notes
 
@@ -92,6 +98,8 @@ edges</figcaption>
 
 You build it, then what?
 
+### The map is not the territory, but the right map is useful
+
 ### Qualitative reasoning about interventions
 
 This can be done with Systems Maps just fine, does not need the DAG
@@ -133,3 +141,9 @@ How wide does the model go? What get’s included in the model?
 
 How detailed is the model? Do some nodes need to be merged? Should some
 be split?
+
+## 5. Do - draw with pens
+
+## 6. Now what - implications with DAGitty
+
+## 7. Reflect
