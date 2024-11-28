@@ -1,0 +1,83 @@
+---
+title: "Presenter notes - ALASI24"
+author: Ben Hicks
+output:
+  github_document:
+    toc: true
+    toc_depth: 3
+---
+
+# Presenter notes
+
+## 0. Assumptions
+
+-   The Fisher Inoculation: It is ok to talk about causes.
+-   We care about causes in learning.
+
+## 1. Why (part 1 - no cause without knowledge)
+
+Given, X = {1,2,3,4} and Y = {2,4,6,8}, what might you say about the two variables?
+
+-   Are they associated?
+-   What is their relationship?
+-   Is it $X \rightarrow 2X=Y$ or $Y \rightarrow Y/2 = X$? Did you make a claim? What hidden assumptions were there? (order of writing, X before Y, doubling instead of halving)
+
+Any data-driven approach falls short here. Knowledge must come from outside the system.
+
+## 2. What
+
+### Systems maps (Causal DG)
+
+-   System maps (causal map, graphical causal model, ...) are used for a range of things. Nodes, edges indicating cause, additional info on edges (weight, polarity, function). Directed graphs.
+
+![Example of a systems map. (SRL)](bjet13321-fig-0002-m.jpg)
+
+### Causal DAGs
+
+-   DAGs are a specific form of a system map: Acyclic, no edge feature other than direction. Have a very nice mathematical interpretation. This has nice affordances in translating to machines / mathematics.
+
+![Example of a DAG](home-library-DAG-1.png)
+
+![Example of a DAG with augmented edges](home-library-dag-2.png)
+
+### Analysing - connecting to conditional independence
+
+#### Connected dyads always dependent
+
+#### Chain
+
+#### Fork
+
+#### Collider
+
+## 3 Why (part 2 - affordances)
+
+You build it, then what?
+
+
+### Qualitative reasoning about interventions
+
+This can be done with Systems Maps just fine, does not need the DAG
+
+### Simulation
+
+This can be done in a variety of ways, such as agent-based models for any of the maps, or data generating processes for the DAGs. 
+
+### Causal inference / debiasing
+
+Using the DAG to find adjustment sets for causal inference or minimising bias in ML models.
+
+### System (i.e. LA) design
+
+Using the adjustment sets to provide design advice - knowing what to include with what on a dashboard for instance (i.e. filters and slices in comparison graphs).
+
+## 4. How
+
+There is no agreed way. 
+
+However, some guiding principles:
+
+### Bounding
+
+### Depth
+
