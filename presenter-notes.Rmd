@@ -75,9 +75,19 @@ Using the adjustment sets to provide design advice - knowing what to include wit
 
 There is no agreed way. 
 
-However, some guiding principles:
+However, here are some guiding principles:
+
+### No connection is a strong assumption
+
+### Think in paths
+
+Each path is a chain of events that could tell a story. Jump in and out of examples / scenarios and the general rule. 
 
 ### Bounding
 
+How wide does the model go? What get's included in the model?
+
 ### Depth
+
+How detailed is the model? Do some nodes need to be merged? Should some be split?
 

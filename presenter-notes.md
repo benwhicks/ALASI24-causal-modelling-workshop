@@ -18,6 +18,9 @@ Ben Hicks
     - [Causal inference / debiasing](#causal-inference--debiasing)
     - [System (i.e. LA) design](#system-ie-la-design)
   - [4. How](#4-how)
+    - [No connection is a strong
+      assumption](#no-connection-is-a-strong-assumption)
+    - [Think in paths](#think-in-paths)
     - [Bounding](#bounding)
     - [Depth](#depth)
 
@@ -113,8 +116,20 @@ in comparison graphs).
 
 There is no agreed way.
 
-However, some guiding principles:
+However, here are some guiding principles:
+
+### No connection is a strong assumption
+
+### Think in paths
+
+Each path is a chain of events that could tell a story. Jump in and out
+of examples / scenarios and the general rule.
 
 ### Bounding
 
+How wide does the model go? What get’s included in the model?
+
 ### Depth
+
+How detailed is the model? Do some nodes need to be merged? Should some
+be split?
