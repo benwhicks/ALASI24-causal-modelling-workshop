@@ -137,6 +137,8 @@ of examples / scenarios and the general rule.
 
 How wide does the model go? What get’s included in the model?
 
+This might be temporal bounding - for instance SES of parents
+
 ### Depth
 
 How detailed is the model? Do some nodes need to be merged? Should some

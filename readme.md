@@ -32,6 +32,54 @@ repo](https://github.com/benwhicks/ALASI24-causal-modelling-workshop/blob/main/p
 
 ### With `bnlearn` in R
 
+``` r
+library(tidyverse)
+```
+
+    ## ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+    ## ✔ dplyr     1.1.4     ✔ readr     2.1.5
+    ## ✔ forcats   1.0.0     ✔ stringr   1.5.1
+    ## ✔ ggplot2   3.5.0     ✔ tibble    3.2.1
+    ## ✔ lubridate 1.9.3     ✔ tidyr     1.3.1
+    ## ✔ purrr     1.0.2     
+    ## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+    ## ✖ dplyr::filter() masks stats::filter()
+    ## ✖ dplyr::lag()    masks stats::lag()
+    ## ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+
+``` r
+library(bnlearn)
+
+# creating some sample data
+N <- 50
+noise_size <- 3
+d <- tibble(
+    A = sample(1:10, N, replace = TRUE),
+    B = sample(2:8, N, replace = TRUE)) |> 
+    mutate(A = A/1.1, B = B / 1.2) |> 
+    mutate(C = 2 * A + noise_size * rnorm(N)) |> 
+    mutate(D = C + 3 * B - A + noise_size * rnorm(N)) 
+
+true_dag <- tibble(
+    from = c("A", "C", "A"),
+    to = c("C", "D", "D")
+)
+
+bn_struct <- gs(d)
+plot(bn_struct)
+```
+
+![](readme_files/figure-gfm/causal-discovery-in-R-1.png)<!-- -->
+
+``` r
+# what if we know that C does not cause A?
+bl = matrix(c("C", "A"), ncol = 2, byrow = TRUE)
+bn_struct2 <- gs(d, blacklist = bl)
+plot(bn_struct2)
+```
+
+![](readme_files/figure-gfm/unnamed-chunk-1-1.png)<!-- -->
+
 ### With `CausalNex` in Python
 
 Not working yet…
@@ -80,7 +128,7 @@ We will explore how drawing diagrams such as the one below, called DAGs,
 can help understand causality and potential sources of bias (the DAG
 below is known as the ‘butterfly bias’).
 
-![](readme_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+![](readme_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
 ### How can Causal Models help minimise bias?
 

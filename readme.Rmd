@@ -16,7 +16,33 @@ The workshop notes are available [here](https://sites.google.com/view/alasi24-cc
 ### With `bnlearn` in R
 
 ```{r causal-discovery-in-R}
+library(tidyverse)
+library(bnlearn)
 
+# creating some sample data
+N <- 50
+noise_size <- 3
+d <- tibble(
+    A = sample(1:10, N, replace = TRUE),
+    B = sample(2:8, N, replace = TRUE)) |> 
+    mutate(A = A/1.1, B = B / 1.2) |> 
+    mutate(C = 2 * A + noise_size * rnorm(N)) |> 
+    mutate(D = C + 3 * B - A + noise_size * rnorm(N)) 
+
+true_dag <- tibble(
+    from = c("A", "C", "A"),
+    to = c("C", "D", "D")
+)
+
+bn_struct <- gs(d)
+plot(bn_struct)
+```
+
+``` {r}
+# what if we know that C does not cause A?
+bl = matrix(c("C", "A"), ncol = 2, byrow = TRUE)
+bn_struct2 <- gs(d, blacklist = bl)
+plot(bn_struct2)
 ```
 
 ### With `CausalNex` in Python
